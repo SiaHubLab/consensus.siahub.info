@@ -13,7 +13,6 @@
 ?> MB
 </p>
 
-<p>Checksum MD5: <?=explode(' ', file_get_contents('./md5sum.txt'))[0]?> <a href="/md5sum.txt">md5sum.txt</a></p>
 <p>Checksum SHA256: <?=explode(' ', file_get_contents('./sha256sum.txt'))[0]?> <a href="/sha256sum.txt">sha256sum.txt</a></p>
 
 <p>Download: <a href="/consensus.db">https://consensus.siahub.info/consensus.db</a> (proxy CloudFlare)</p>
