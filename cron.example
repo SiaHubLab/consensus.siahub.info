@@ -1,1 +1,1 @@
-0 */12 * * *     root cd /home/consensus.siahub && cp -rp /home/sia/host/consensus/consensus.db /home/consensus.siahub/ && sha256sum consensus.db > sha256sum.txt && chown -R www-data:www-data /home/consensus.siahub/
+0 */24 * * *     root cd /home/consensus.siahub && cp -rp /home/sia/host/consensus/consensus.db /home/consensus.siahub/ && sha256sum consensus.db > sha256sum.txt && chown -R www-data:www-data /home/consensus.siahub/
