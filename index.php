@@ -2,21 +2,23 @@
 <p>Last update:
 <?php
 
-    echo TimeAgo(filemtime('./consensus.db')).' // ';
-    echo date(DATE_RFC850, filemtime('./consensus.db'));
+    echo TimeAgo(filemtime('./consensus.db.gz')).' // ';
+    echo date(DATE_RFC850, filemtime('./consensus.db.gz'));
 ?>
 </p>
 
 <p>Size:
 <?php
-    echo round(filesize('./consensus.db')/1024/1024);
+    echo round(filesize('./consensus.db.gz')/1024/1024);
 ?> MB
 </p>
 
-<p>Checksum SHA256: <?=explode(' ', file_get_contents('./sha256sum.txt'))[0]?> <a href="/sha256sum.txt">sha256sum.txt</a></p>
+<p>Checksum SHA256 (gzip): <?=explode(' ', file_get_contents('./consensus.db.gz.sha256sum'))[0]?> <a href="/consensus.db.gz.sha256sum">consensus.db.gz.sha256sum</a></p>
 
-<p>Download: <a href="/consensus.db">https://consensus.siahub.info/consensus.db</a> (proxy CloudFlare)</p>
-<p>Download mirror: <a href="http://direct.consensus.siahub.info/consensus.db">http://direct.consensus.siahub.info/consensus.db</a> (directly from server)</p>
+<p>Checksum SHA256: <?=explode(' ', file_get_contents('./consensus.db.sha256sum'))[0]?> <a href="/consensus.db.sha256sum">consensus.db.sha256sum</a></p>
+
+<p>Download: <a href="/consensus.db.gz">https://consensus.siahub.info/consensus.db.gz</a> (proxy CloudFlare)</p>
+<p>Download mirror: <a href="http://direct.consensus.siahub.info/consensus.db">http://direct.consensus.siahub.info/consensus.db.gz</a> (directly from server)</p>
 
 <p>How to: <a href="https://siawiki.tech/daemon/bootstrapping_the_blockchain">https://siawiki.tech/daemon/bootstrapping_the_blockchain</a></p>
 
