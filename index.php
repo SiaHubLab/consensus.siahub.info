@@ -18,7 +18,7 @@
 <p>Checksum SHA256: <?=explode(' ', file_get_contents('./consensus.db.sha256sum'))[0]?> <a href="/consensus.db.sha256sum">consensus.db.sha256sum</a></p>
 
 <p>Download: <a href="/consensus.db.gz">https://consensus.siahub.info/consensus.db.gz</a> (proxy CloudFlare)</p>
-<p>Download mirror: <a href="http://direct.consensus.siahub.info/consensus.db">http://direct.consensus.siahub.info/consensus.db.gz</a> (directly from server)</p>
+<p>Download mirror: <a href="http://direct.consensus.siahub.info/consensus.db.gz">http://direct.consensus.siahub.info/consensus.db.gz</a> (directly from server)</p>
 
 <p>How to: <a href="https://siawiki.tech/daemon/bootstrapping_the_blockchain">https://siawiki.tech/daemon/bootstrapping_the_blockchain</a></p>
 
