@@ -1,4 +1,12 @@
+
 <p>Daily consensus update.</p>
+
+<?php
+if(!file_exists('./consensus.db.gz')){
+ die('consensus.db update in progress, please try again later');
+}
+?>
+
 <p>Last update:
 <?php
 
