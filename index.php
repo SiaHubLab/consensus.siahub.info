@@ -14,7 +14,10 @@ if(!file_exists('./consensus.db.gz')){
     echo date(DATE_RFC850, filemtime('./consensus.db.gz'));
 ?>
 </p>
-
+<?php
+$consensus_download = json_decode(file_get_contents('consensus.json'), true);
+?>
+<p>Consensus height: <a target="_blank" href="https://explorer.siahub.info/block/<?=$consensus_download['height']?>"><?=$consensus_download['height']?></a> (<?=$consensus_download['currentblock']?>)</p>
 <p>Size:
 <?php
     echo round(filesize('./consensus.db.gz')/1024/1024);
