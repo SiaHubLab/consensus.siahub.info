@@ -20,7 +20,7 @@ Open an issue or a pull request to suggest changes or additions.
 
 ## Contributors
 
-Check out all the super awesome [contributors](https://github.com/S-anasol/SiaConsensusIndexer/graphs/contributors).
+Check out all the super awesome [contributors](https://github.com/S-anasol/consensus.siahub.info/graphs/contributors).
 
 
 ## License
