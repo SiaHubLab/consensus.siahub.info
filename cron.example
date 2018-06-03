@@ -1,1 +1,8 @@
-0 0 * * *     root cd /home/consensus.siahub && rm -rf /home/consensus.siahub/consensus.db && cp -rp /home/sia/host/consensus/consensus.db /home/consensus.siahub/ && tee >(sha256sum | sed 's/-/consensus.db/' > consensus.db.sha256sum ) < /home/sia/host/consensus/consensus.db | gzip | tee >(sha256sum | sed 's/-/consensus.db.gz/' >consensus.db.gz.sha256sum ) >consensus.db.gz && chown -R www-data:www-data /home/consensus.siahub/
+cd /home/consensus.siahub && rm -rf /home/consensus.siahub/consensus.db && rm -rf /home/consensus.siahub/consensus.db.gz  && cp -rp /home/sia/host/consensus/consensus.db /home/consensus.siahub/ && tee >(sha256sum | sed 's/-/consensus.db/' > consensus.db.sha256sum ) < /home/sia/host/consensus/consensus.db | gzip | tee >(sha256sum | sed 's/-/consensus.db.gz/' >consensus.db.gz.sha256sum ) >consensus.db.gz && chown -R www-data:www-data /home/consensus.siahub/
+
+curl -A "Sia-Agent" "localhost:9980/consensus" > /home/consensus.siahub/consensus.json
+
+rm -rf /home/consensus.siahub/consensus.db
+
+cd /home/consensus.siahub && rm -rf /home/consensus.siahub/hostdb.json && rm -rf /home/consensus.siahub/hostdb.json.gz  && cp -rp /home/sia/host/renter/hostdb.json /home/consensus.siahub/ && tee >(sha256sum | sed 's/-/hostdb.json/' > hostdb.json.sha256sum ) < /home/sia/host/renter/hostdb.json | gzip | tee >(sha256sum | sed 's/-/hostdb.json.gz/' >hostdb.json.gz.sha256sum ) >hostdb.json.gz && chown -R www-data:www-data /home/consensus.siahub/
+
